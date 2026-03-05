@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgreen;
+    align-items: center;
+}
+
+.logo img{
+    width:100px;
+    height: 100px;
+}
+.navlinks{
+    padding: 10px;
+}
+.navlinks a{
+    text-decoration: none;
+    margin: 3px;
+}
+.navlinks a:hover{
+    color:blue;
+}
+
+.navlinks a:active{
+    color:"brown";
+}
+.about{
+    display: flex;
+    justify-content: space-evenly;
+}

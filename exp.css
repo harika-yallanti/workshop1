@@ -1,0 +1,51 @@
+body{
+    
+    margin:0;
+    background:lightcyan;
+}
+
+header{
+    background:lightblue;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:whitesmoke;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:blueviolet;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:brown;
+}
+
+section{
+    padding:20px;
+}
+
+h2{
+    color:#333;
+}
+
+.project{
+    background:white;
+    padding:15px;
+    margin:10px 0;
+    border-radius:5px;
+}
+
+footer{
+    background:cornflowerblue;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
