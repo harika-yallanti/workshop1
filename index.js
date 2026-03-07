@@ -1,50 +1,18 @@
-// console.log("JS loaded");
-let btn1Obj = document.getElementById("btn1");
-let btn2Obj = document.getElementById("btn2"); 
-let para1Obj = document.createElement("p");//globally
-let divObj = document.createElement("div");
-let bodyCollection = document.getElementsByTagName("body");//1
-let bodyObj = bodyCollection[0];//1
+//https://api.ipoalerts.in/ipos?status=open->get method->fetch the ipos
 
-// console.log(btn1Obj,"btn1 Obj");
-// console.log(document.body,"body Obj");
-
-// // console.log(typeof btn1Obj);
-
-// //click
-// //addEventListener
-// btn1Obj.addEventListener("click",function (){
-//     console.log("Btn 1 clicked");
-//     // let para1Obj = document.createElement("p");//locally  //createElement()
-//     console.log(para1Obj);
-//     para1Obj.innerHTML = "Bearish view on BTCUSO";          //innerText innerHTML
-//     //styling
-//     para1Obj.style.color = 'purple';
-//     para1Obj.style.fontSize = '40px';
-//     // document.body.appendChild(divObj);
-//     // document.body.appendChild(para1Obj) // 1 or this one line
-//     divObj.appendChild(para1Obj)
-//     console.log(para1Obj);
-//     // bodyObj.appendChild(para1Obj);  //appendChild //1
-    
-// });
-// btn1Obj.addEventListener("click",function (){
-//     para1Obj.innerHTML = "Global Stock Exchange";
-//     para1Obj.style.color = 'orange';
-//     para1Obj.style.fontSize = '40px';
-//     document.body.appendChild(para1Obj);
-// });
-
-btn1Obj.addEventListener("click", function () {
-    para1Obj.innerHTML = "Bearish view on BTCUSO";
-    para1Obj.style.color = "purple";
-    para1Obj.style.fontSize = "40px";
-    document.body.appendChild(para1Obj);
-});
-
-btn2Obj.addEventListener("click", function () {
-    para1Obj.innerHTML = "Global Stock Exchange";
-    para1Obj.style.color = "orange";
-    para1Obj.style.fontSize = "40px";
-    document.body.appendChild(para1Obj);
-});
+//fetch is a bulidin js
+async function fetchIpos(){
+    //we can intgrate api using fetch method(buildin js method).in react.js axios(library)
+    //It is asynchranous one
+    //async await->tells js to wait for the respons until api returns
+    //use async to add await else error
+    let response = await fetch("https://api.ipoalerts.in/ipos?status=open",{
+        headers:{
+            "x-api-key":
+            "ef5ad68fc311b6be1e202f7860724fcbc54be3a2e18a4a2cb8870df0468d887f",
+            "Content-Type":"application/json",
+        },
+    });
+    console.log(response);
+}
+fetchIpos();
